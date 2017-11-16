@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.example.user.mysql_connecting.LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_email"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:hint="E-mail Address"
+            android:maxLength="50"
+            android:layout_marginBottom="5dp"
+            android:inputType="textEmailAddress"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_password"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:hint="Password"
+            android:maxLength="15"
+            android:layout_marginBottom="5dp"
+            android:inputType="textPassword"/>
+
+      </LinearLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/login_footer">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Don't have an account ? "/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btn_goto_register"
+                android:textColor="#0000EE"
+                android:text="CLICK HERE!"/>
+            <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="to create one!!!"/>
+
+
+        </LinearLayout>
+
+        <Button
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_login"
+            android:text="Login"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

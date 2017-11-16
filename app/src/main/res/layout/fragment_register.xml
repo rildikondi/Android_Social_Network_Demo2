@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.mysql_connecting.RegisterFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/register_footer"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Name / User Name"
+            android:inputType="textPersonName"
+            android:maxLength="35"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="E-mail Address"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+
+        <EditText
+            android:id="@+id/email2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Re-enter E-mail"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Re-enter Password"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password must contain the following citeria:" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be at beetwen 0 and 15 characters long," />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One uppercase letter (A - Z)," />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One Number (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) and" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One Special Character (. * [ $ @ # ! % * ? &amp;)" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/register_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account ? " />
+
+            <TextView
+                android:id="@+id/btn_go_to_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLICK HERE!"
+                android:textColor="#0000EE" />
+
+
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
