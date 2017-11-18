@@ -160,7 +160,32 @@ public class LoginFragment extends Fragment implements View.OnClickListener,View
                 break;
             case R.id.btn_goto_register:
 
-                fragmentManager.beginTransaction().replace(R.id.content, new RegisterFragment()).commit();
+               // fragmentManager.beginTransaction().replace(R.id.content, new RegisterFragment()).commit();
+
+
+                if(fragmentManager.findFragmentByTag("registerfragment") == null) {
+                    Toast.makeText(getActivity().getApplicationContext(), "register is null", Toast.LENGTH_SHORT).show();
+
+                    if(fragmentManager.findFragmentByTag("infofragment") != null) {
+                        fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("infofragment")).commit();
+                    }
+                    if(fragmentManager.findFragmentByTag("loginfragment") != null) {
+                        fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("loginfragment")).commit();
+                    }
+                    fragmentManager.beginTransaction().add(R.id.content, new RegisterFragment(), "registerfragment").commit();
+
+                }else
+                {
+                    if(fragmentManager.findFragmentByTag("infofragment") != null) {
+                        fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("infofragment")).commit();
+                    }
+                    if(fragmentManager.findFragmentByTag("loginfragment") != null) {
+                        fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("loginfragment")).commit();
+                    }
+                    Toast.makeText(getActivity().getApplicationContext(), "register is  not null", Toast.LENGTH_SHORT).show();
+                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("registerfragment")).commit();
+
+                }
 
                 break;
             default:
